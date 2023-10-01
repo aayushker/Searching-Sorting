@@ -1,4 +1,4 @@
-What is a Searching Algorithm?
+What is a Searching Algorithm?<br>
 Searching Algorithms are designed to check for an element or retrieve an element from any data structure where it is stored.
 
 Different Searching Algorithm:
@@ -15,7 +15,7 @@ Different Searching Algorithm:
 
 <hr>
 
-What is Sorting?
+What is Sorting?<br>
 A Sorting Algorithm is used to rearrange a given array or list of elements according to a comparison operator on the elements. The comparison operator is used to decide the new order of elements in the respective data structure.
 
 Different prominent Sorting Algorithm:

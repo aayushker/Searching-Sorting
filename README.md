@@ -30,18 +30,9 @@ Different prominent Sorting Algorithm:
       Bucket Sort
 
 Time and Space complexity of different Sorting Algorithms:
+![Screenshot 2023-10-01 213923](https://github.com/aayushker/Searching-Sorting/assets/134710667/52022b06-5942-497a-aed1-dbbc65657eae)
 
-Table of Complexity Comparison:
-Name	                  Best Case  	  Average Case  	Worst Case   	Memory	  Stable   	Method Used
-Quick Sort	            n log n	      n log n	        n^{2}	        log n	    No	      Partitioning
-Merge Sort	            n log n	      n log n	        n log n	      n	        Yes	      Merging
-Heap Sort	              n log n	      n log n	        n log n	      1	        No	      Selection
-Insertion Sort	        n	            n^{2}	          n^{2}	        1	        Yes	      Insertion
-Tim Sort	              n	            n log n	        n log n	      n	        Yes	      Insertion & Merging
-Selection Sort	        n^{2}	        n^{2}	          n^{2}	        1	        No	      Selection
-Shell Sort	            n log n	      n^{4/3}	        n^{3/2}	      1	        No	      Insertion
-Bubble Sort	            n	            n^{2}	          n^{2}	        1	        Yes	      Exchanging
-Tree Sort	              n log n	      n log n	        n log n	      n	        Yes	      Insertion
+
 Cycle Sort	            n^{2}	        n^{2}	          n^{2}	        1         No	      Selection
 Strand Sort	            n	            n^{2}	          n^{2}	        n	        Yes	      Selection
 Cocktail Shaker Sort	  n	            n^{2}	          n^{2}	        1	        Yes	      Exchanging

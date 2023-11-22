@@ -1,34 +1,32 @@
 #include<stdio.h>
-#include<stdlib.h>
 
-int linearS(int a[], int ele, int n){
-    for (int i=0; i<n; i++){
-        if (a[i] == ele){
-            return i;
-            exit(0);
+int binaryS(int a[], int n, int ele){
+    for (int i = 0; i<n; i++){
+        if (a[i]==ele){
+            return i+1;
         }
     }
     return -1;
 }
 
 int main(){
-    int n;
-    printf("Enter size of the array\n");
+    int n,ele;
+    printf("Enter the total number of elements you want to enter");
     scanf("%d",&n);
     int a[n];
-    printf("Enter the elements\n");
     for (int i=0; i<n; i++){
         scanf("%d",&a[i]);
     }
-    int ele,search;
-    printf("Enter the element to find\n");
+    int pos;
+    printf("Enter the element you want to find");
     scanf("%d",&ele);
-    search = linearS(a, ele, n);
-    if (search == -1){
+    pos = binaryS(a, n, ele);
+    if (pos==-1){
         printf("Element not found\n");
     }
     else{
-        printf("The element %d found at %d\n",ele,search+1);
+        printf("Element found at location %d",pos);
     }
     return 0;
+
 }

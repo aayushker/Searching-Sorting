@@ -1,44 +1,54 @@
-#include<stdio.h>
-#include<stdlib.h>
+// Insertion sort is a simple sorting algorithm that works similar to the way you sort playing cards in your hands. 
+// The array is virtually split into a sorted and an unsorted part.
+// Values from the unsorted part are picked and placed at the correct position in the sorted part.
 
-void insertionSort(int arr[], int n)
-{
-    int i, key, j;
-    for (i = 1; i < n; i++) 
-    {
+// Insertion Sort Algorithm
+// To sort an array of size N in ascending order iterate over the array and compare the current element (key) to its predecessor, 
+// if the key element is smaller than its predecessor, compare it to the elements before.
+//  Move the greater elements one position up to make space for the swapped element.
+
+#include<stdio.h>
+
+void insertionSort(int arr[], int size){
+    
+    for (int i=1; i<size; i++){
+        int j, key;
         key = arr[i];
-        j = i - 1;
- 
-        /* Move elements of arr[0..i-1], that are
-        greater than key, to one position ahead
-        of their current position */
-        while (j >= 0 && arr[j] > key) 
-        {
-            arr[j + 1] = arr[j];
-            j = j - 1;
+        j = i-1;
+
+        while (j>=0 && arr[j]>key){
+            arr[j+1] = arr[j];
+            j--;
         }
-        arr[j + 1] = key;
-        printf("Pass %d: ",i);
-        for(int k=0;k<n;k++)
+        arr[j+1] = key;
+        printf("Pass %d: ",i); 
+        for(int k=0; k<size; k++)
             printf("%d ",arr[k]);
         printf("\n");
     }
 }
 
-int main()
-{
-    int n;
-    printf("Enter the number of elements: ");
-    scanf("%d",&n);
-    int arr[n];
-    printf("Enter the elements: ");
-    for(int i=0;i<n;i++)
+void display(int arr[], int size){
+    printf("The sorted array is\n");
+    for (int i=0; i<size; i++){
+        printf("%d\n",arr[i]);
+    }
+}
+
+int main(){
+    int size;
+    printf("Enter how many elements you want: ");
+    scanf("%d",&size);
+
+    int arr[size]; 
+    printf("Enter the elements\n");
+    for (int i=0; i<size; i++){
         scanf("%d",&arr[i]);
-    insertionSort(arr,n);
-    printf("Sorted array is: ");
-    for(int i=0;i<n;i++)
-        printf("%d ",arr[i]);
-    printf("\n");
+    }
+    printf("_______________________");
+    insertionSort(arr, size);
+    display(arr, size);
+
     return 0;
 }
 
@@ -51,8 +61,21 @@ int main()
 // Pass 4: 1 2 3 4 5
 // Sorted array is: 1 2 3 4 5
 
-// Time Complexity: O(n^2)
-// Auxiliary Space: O(1)
+// Complexity Analysis of Insertion Sort:
+
+// Time Complexity of Insertion Sort
+// The worst-case time complexity of the Insertion sort is O(N^2)
+// The average case time complexity of the Insertion sort is O(N^2)
+// The time complexity of the best case is O(N).
+// Space Complexity of Insertion Sort
+// The auxiliary space complexity of Insertion Sort is O(1)
+
 // Boundary Cases: Insertion sort takes maximum time to sort if elements are sorted in reverse order.
 // And it takes minimum time (Order of n) when elements are already sorted.
+
 // Algorithmic Paradigm: Incremental Approach
+
+// Characteristics of Insertion Sort
+// This algorithm is one of the simplest algorithms with a simple implementation
+// Basically, Insertion sort is efficient for small data values
+// Insertion sort is adaptive in nature, i.e. it is appropriate for data sets that are already partially sorted.

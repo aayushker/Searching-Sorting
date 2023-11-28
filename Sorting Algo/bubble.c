@@ -6,27 +6,17 @@
 // In this way, the largest element is moved to the rightmost end at first. 
 // This process is then continued to find the second largest and place it and so on until the data is sorted.
 
-// 1. The function bubbleS takes an array arr[] and its
-// size n as input.
-// 2. It uses two nested loops to iterate over the array. The
-// outer loop i goes from 0 to n-2 , and the inner loop
+// 1. The function bubbleS takes an array arr[] and its size n as input.
+// 2. It uses two nested loops to iterate over the array. The outer loop i goes from 0 to n-2 , and the inner loop
 // j goes from 0 to n-i-2.
-// 3. A flag variable is initialized to 0 at the start of each
-// outer loop iteration. This flag is used to check if any
+// 3. A flag variable is initialized to 0 at the start of each outer loop iteration. This flag is used to check if any
 // swaps occurred during the inner loop iteration.
-// 4. In the inner loop, each element arr[j] is compared
-// with the next element arr[j+l] . If arr[j] is greater
-// than arr[j+l] they are in the wrong order and need
-// to be swapped.
-// 5. The swap is done using a temporary variable temp .
-// After the swap, flag is set to 1 to indicate that a
-// swap has occurred.
-// 6. After each inner loop iteration, if flag is still , it
-// means no swaps occurred, which means the array is
-// already sorted. In this case, the function breaks out of
-// the outer loop early.
-// 7. The function returns when it's done sorting the
-// array.
+// 4. In the inner loop, each element arr[j] is compared with the next element arr[j+l] . If arr[j] is greater
+// than arr[j+l] they are in the wrong order and need to be swapped.
+// 5. The swap is done using a temporary variable temp . After the swap, flag is set to 1 to indicate that a swap has occurred.
+// 6. After each inner loop iteration, if flag is still , it means no swaps occurred, which means the array is
+// already sorted. In this case, the function breaks out of the outer loop early.
+// 7. The function returns when it's done sorting the array.
 
 #include<stdio.h>
 
@@ -72,7 +62,7 @@ int main(){
 }
 
 // Complexity Analysis of Bubble Sort:
-// Time Complexity: O(N2)
+// Time Complexity: O(N^2)
 // Auxiliary Space: O(1)
 
 // Advantages of Bubble Sort:

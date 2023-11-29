@@ -79,3 +79,36 @@ int main(){
 // This algorithm is one of the simplest algorithms with a simple implementation
 // Basically, Insertion sort is efficient for small data values
 // Insertion sort is adaptive in nature, i.e. it is appropriate for data sets that are already partially sorted.
+
+// In depth explanation:
+// 1. The function insertionSort takes an array arr[] and its length n
+// as input.
+// 2. It starts from the second element (index 1) of the array and
+// considers it as the key.
+// 3. It compares this key with the elements before it. If an element is
+// greater than the key, it shifts that element one position to the right.
+// 4. This process continues until it finds an element smaller than the key
+// or reaches the beginning of the array. It then places the key in the
+// correct position.
+// 5. The process repeats for all elements in the array, resulting in a
+// sorted array.
+// 6. After each pass, it prints the current state of the array.
+
+// Here's a step-by-step breakdown:
+// 1; i < n; i++) : This loop goes through each element in
+// • for (i =
+// the array starting from the second element.
+// - 1; : The current element is considered as
+// • key = arr[i]; j = 1
+// the key and j is set to the index of the previous element.
+// • while (j && arr[j] > key) : This loop shifts all elements
+// greater than the key one position to the right.
+// • arr[j + 1] = arr[j]; J
+// - 1; : This shifts the current element
+// one position to the right and decrements j .
+// • arr[j + 1] = key; : After all greater elements have been shifted,
+// the key is placed in its correct position.
+// • Xd: "*i); : This prints the pass number.
+// • for(int 1<20; k<n; k++) : This prints the
+// array after each pass.
+// • printf("\n"); : This prints a newline character for formatting.

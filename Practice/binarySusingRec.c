@@ -1,17 +1,18 @@
 #include<stdio.h>
 
 int binaryS(int a[], int l, int r, int ele){
-    while (l<=r){
+    while(l<=r){
         int mid = (l+r)/2;
+
         if (a[mid]==ele){
             return mid+1;
         }
         else{
             if (a[mid]>ele){
-                return binaryS(a,l,mid-1,ele);
+                return binaryS(a, l, mid-1, ele);
             }
-            else if (a[mid]<ele){
-                return binaryS(a,mid+1,r,ele);
+            else{
+                return binaryS(a, mid+1, r, ele);
             }
         }
     }

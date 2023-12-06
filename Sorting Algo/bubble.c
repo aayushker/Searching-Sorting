@@ -8,7 +8,7 @@
 
 // 1. The function bubbleS takes an array arr[] and its size n as input.
 // 2. It uses two nested loops to iterate over the array. The outer loop i goes from 0 to n-2 , and the inner loop
-// j goes from 0 to n-i-2.
+// j goes from 0 to n-i-1.
 // 3. A flag variable is initialized to 0 at the start of each outer loop iteration. This flag is used to check if any
 // swaps occurred during the inner loop iteration.
 // 4. In the inner loop, each element arr[j] is compared with the next element arr[j+l] . If arr[j] is greater

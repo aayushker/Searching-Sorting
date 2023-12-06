@@ -1,18 +1,19 @@
 #include<stdio.h>
 
 int binaryS(int a[], int n, int ele){
-    int low =0 , high =n-1;
-    while (low<=high){
-        int mid = (low+high)/2;
-        if (a[mid] == ele){
+    int l=0, r=n-1;
+    while (l<=r){
+        int mid = (l+r)/2;
+
+        if (a[mid]==ele){
             return mid+1;
         }
         else{
             if (a[mid]>ele){
-               high = mid-1;
+                r = mid-1;
             }
             else{
-                 low = mid+1;
+                l = mid+1;
             }
         }
     }

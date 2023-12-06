@@ -2,7 +2,7 @@
 
 void  merge(int a[], int l, int m, int r){
     int i=l, j = m+1, k=l;
-    temp = 
+    int temp = 
 }
 
 

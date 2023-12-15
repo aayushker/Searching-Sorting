@@ -61,11 +61,15 @@ void printArray(int arr[], int size) {
 
 // Driver code
 int main() {
-    int arr[] = {10, 7, 8, 9, 1, 5};
-    int size = sizeof(arr) / sizeof(arr[0]);
-    
-    printf("Original array: ");
-    printArray(arr, size);
+    int size; 
+    printf("Enter how many elements you want to enter ");
+    scanf("%d",&size);
+
+    int arr[size];
+    printf("Enter the elements\n");
+    for (int i=0; i<size; i++){
+        scanf("%d",&arr[i]);
+    }
     
     quickSort(arr, 0, size - 1);
     
@@ -73,4 +77,5 @@ int main() {
     printArray(arr, size);
     
     return 0;
+    
 }

@@ -59,16 +59,23 @@ void printArray(int arr[], int n) {
 
 // Driver code
 int main() {
-    int arr[] = {170, 45, 75, 90, 802, 24, 2, 66};
-    int n = sizeof(arr) / sizeof(arr[0]);
+    int size; 
+    printf("Enter how many elements you want to enter ");
+    scanf("%d",&size);
+
+    int arr[size];
+    printf("Enter the elements\n");
+    for (int i=0; i<size; i++){
+        scanf("%d",&arr[i]);
+    }
 
     printf("Original array: ");
-    printArray(arr, n);
+    printArray(arr, size);
 
-    radixSort(arr, n);
+    radixSort(arr, size);
 
     printf("Sorted array: ");
-    printArray(arr, n);
+    printArray(arr, size);
 
     return 0;
 }

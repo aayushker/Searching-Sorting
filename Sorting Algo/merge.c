@@ -13,7 +13,7 @@
 #include<stdio.h>
 
 void merge(int arr[], int l, int m, int r){
-    int i=l, j=m+1, k=0;
+    int i=l, j=m+1, k=l;
     int temp[r];
     while (i<=m && j<=r){
         if (arr[i]<=arr[j]){
@@ -34,8 +34,8 @@ void merge(int arr[], int l, int m, int r){
         j++; k++;
     }
 
-    for (int p=0; p<k; p++){
-        arr[l+p] = temp[p];
+    for (int p=l; p<=r; p++){
+        arr[p] = temp[p];
     }
 }
 

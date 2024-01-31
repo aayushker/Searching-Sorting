@@ -17,6 +17,7 @@ int search(int arr[], int ele, int n){
             return i;
         }
     }
+    return -1;
 }
 
 int main(){
@@ -33,7 +34,13 @@ int main(){
     printf("Enter the element you want to search");
     scanf("%d",&ele);
     pos= search (arr, ele, n);
-    printf("Element found on position %d", pos+1);
+
+    if (pos==-1)
+        printf("Element not found");
+    else{
+        printf("Element found on position %d", pos+1);
+    }
+    
     return 0;
 }
 
